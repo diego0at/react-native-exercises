@@ -1,23 +1,18 @@
 import React from 'react';
-import { ScreensCounter } from './src/screens/ScreensCounter';
-// import { ScreenHelloWord } from './src/screens/helloWorld';
-import { ScreensBoxObjectModel } from './src/screens/ScreensBoxObjectModel';
-import { SafeAreaView } from 'react-native';
-import { ScreensDimensions } from './src/screens/ScreensDimensions';
-import { ScreensPosition } from './src/screens/ScreensPosition';
-import { ScreensFlex } from './src/screens/ScreensFlex';
-import { ScreensTask } from './src/screens/ScreensTask';
+import { SafeAreaView, StatusBar } from 'react-native';
+import { ScreensCalculator } from './src/screens/ScreensCalculator';
+import { styles } from './src/theme/themeApp';
 
-export const App = () => {
+const App = () => {
   return (
-    // <ScreenHelloWord />
-    // <ScreensCounter />
-    <SafeAreaView style={{ flex: 1 }}>
-      {/* <ScreensBoxObjectModel /> */}
-      {/* <ScreensDimensions /> */}
-      {/* <ScreensPosition /> */}
-      {/* <ScreensFlex /> */}
-      <ScreensTask />
+    <SafeAreaView style={styles.background}>
+      <StatusBar
+        backgroundColor="black"
+        barStyle="light-content"  //for IOS
+      />
+      <ScreensCalculator />
     </SafeAreaView>
   )
 }
+
+export default App;
